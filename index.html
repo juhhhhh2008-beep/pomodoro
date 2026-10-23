@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#172b27" />
+  <title>Little Forest — seu cantinho de foco</title>
+  <link rel="preconnect" href="c:\Users\Juliana\Downloads\d218567792f3f72a1074be73ca5fa782.jpg">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Handlee&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-icon">☘</div><div><div class="brand-name">Little Forest</div><p>Pequenos passos<br>também te levam longe</p></div></div>
+      <nav class="nav" aria-label="Navegação principal">
+        <button class="nav-item active" data-view="Início"><span>⌂</span> Início</button>
+        <button class="nav-item" data-view="Tarefas"><span>☑</span> Tarefas</button>
+        <button class="nav-item" data-view="Calendário"><span>▦</span> Calendário</button>
+        <button class="nav-item" data-view="Estatísticas"><span>▥</span> Estatísticas</button>
+        <button class="nav-item" data-view="Notas"><span>▤</span> Notas</button>
+        <button class="nav-item" data-view="Configurações"><span>⚙</span> Configurações</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="tiny-spirit">◉</div><blockquote>“Às vezes, o que precisamos é apenas de um pouco de tempo, e um lugar tranquilo.”</blockquote></div>
+    </aside>
+
+    <main class="main-area">
+      <section class="hero" aria-label="Temporizador Pomodoro">
+        <div class="hero-shade"></div>
+        <div class="timer-wrap">
+          <div class="timer-card">
+            <div class="leaf-mark">♣</div>
+            <div id="timer-caption" class="timer-caption">Hora de focar!</div>
+            <div id="timer-display" class="timer-display" aria-live="polite">25:00</div>
+            <div class="timer-actions"><button id="start-btn" class="start-btn"><span id="start-icon">▶</span><span id="start-label">Iniciar</span></button><button id="reset-btn" class="icon-btn" aria-label="Reiniciar temporizador" title="Reiniciar">↻</button></div>
+            <div class="timer-hint" id="timer-hint">Um passo de cada vez 🌱</div>
+          </div>
+        </div>
+        <div class="mode-row">
+          <button class="mode-card selected" data-mode="focus"><span class="mode-emoji">♟</span><span><b>Foco</b><small><span id="focus-label">25</span> min</small></span><span class="edit-mode" data-edit="focus" title="Editar tempo">✎</span></button>
+          <button class="mode-card" data-mode="short"><span class="mode-emoji">☕</span><span><b>Pausa Curta</b><small><span id="short-label">5</span> min</small></span><span class="edit-mode" data-edit="short" title="Editar tempo">✎</span></button>
+          <button class="mode-card" data-mode="long"><span class="mode-emoji">❧</span><span><b>Pausa Longa</b><small><span id="long-label">15</span> min</small></span><span class="edit-mode" data-edit="long" title="Editar tempo">✎</span></button>
+        </div>
+      </section>
+
+      <section class="bottom-grid">
+        <div class="quote-card"><div class="quote-spark">✦</div><p>“Disciplina é amor próprio<br>em forma de ação.”</p><span>— um lembrete gentil</span></div>
+        <div class="music-card panel"><div class="panel-heading"><span>♫ &nbsp; Música Ambiente</span><button class="dots" id="ambience-btn" aria-label="Ligar ou desligar som" title="Som ambiente">⋮</button></div><div class="music-info"><div class="album-art">🌲<span>☔</span></div><div><b>Chuva na Floresta</b><small id="sound-status">Sons tranquilos para focar</small></div></div><div class="music-controls"><button id="sound-toggle" aria-label="Ligar som ambiente">▶</button><span id="sound-label">Ativar som</span><input id="volume" type="range" min="0" max="100" value="35" aria-label="Volume do som"></div><p class="sound-note">Som ambiente suave gerado no navegador</p></div>
+        <div class="notes-card panel"><div class="panel-heading"><span>▤ &nbsp; Notas Rápidas</span><span class="saved-dot" id="note-saved">● salvo</span></div><textarea id="quick-notes" placeholder="Escreva algo para lembrar..." aria-label="Notas rápidas"></textarea><div class="notes-footer">Suas ideias ficam guardadas neste dispositivo.</div><div class="note-decoration">☘</div></div>
+      </section>
+      <footer class="weather-bar"><div class="weather"><span class="weather-icon">☀</span><div><b id="weather-temp">22°</b><small>Um bom dia para florescer</small></div></div><div class="footer-actions"><button id="ambient-theme" title="Alternar atmosfera" aria-label="Alternar atmosfera">◉</button><button id="night-mode" title="Modo noturno" aria-label="Modo noturno">☾</button><button id="settings-shortcut" title="Configurações" aria-label="Configurações">⚙</button><span class="footer-spirit">◉</span></div></footer>
+    </main>
+
+    <aside class="right-column">
+      <section class="tasks-panel panel">
+        <div class="greeting"><span class="sun-icon">☀</span><div><b id="greeting-text">Boa noite!</b><small id="date-label">Seu cantinho de foco</small></div><button id="calendar-btn" class="small-icon" aria-label="Mostrar data">▦</button></div>
+        <div class="panel-heading task-heading"><span><span class="leaf-icon">❧</span> Tarefas do Dia</span><button id="add-task-btn" class="add-btn" aria-label="Adicionar tarefa">＋</button></div>
+        <form id="task-form" class="task-form hidden"><input id="task-input" maxlength="100" placeholder="Qual é a próxima tarefa?" required><select id="task-tag" aria-label="Categoria"><option>Estudos</option><option>Biologia</option><option>Matemática</option><option>História</option><option>Química</option><option>Pessoal</option></select><button type="submit">Adicionar</button></form>
+        <div id="task-list" class="task-list"></div>
+        <div class="today-progress"><div class="progress-label"><span>▢ &nbsp; Hoje</span><small id="task-count">0/0 tarefas</small></div><div class="progress-track"><div id="task-progress" class="progress-fill"></div></div></div>
+      </section>
+      <section class="stats-panel panel"><div class="panel-heading"><span>▥ &nbsp; Estatísticas</span><button class="text-button" data-view="Estatísticas">Ver mais</button></div><div class="stats-grid"><div class="stat-pill"><span>🐾</span><b id="focus-total">0 min</b><small>Tempo de foco<br>hoje</small></div><div class="stat-pill"><span>🍃</span><b id="cycle-total">0</b><small>Ciclos<br>concluídos</small></div><div class="stat-pill"><span>🔥</span><b id="streak-total">1</b><small>Dias<br>seguidos</small></div></div><div id="stats-extra" class="stats-extra hidden">Cada sessão concluída é mais um pequeno passo. 🌱</div></section>
+      <div class="dream-card"><p>Sonhe, planeje,<br>conquiste.</p><span>✿</span></div>
+    </aside>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>

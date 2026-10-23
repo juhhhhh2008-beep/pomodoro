@@ -1,0 +1,17 @@
+LITTLE FOREST — Pomodoro e tarefas
+
+Como abrir:
+1. Extraia o ZIP para uma pasta.
+2. Abra a pasta no Visual Studio Code.
+3. Abra o arquivo index.html no navegador (ou use a extensão Live Server).
+
+Recursos:
+- Pomodoro com foco, pausa curta e pausa longa; cada duração pode ser alterada pelo lápis.
+- Iniciar, pausar e reiniciar o temporizador.
+- Criar, concluir e excluir tarefas.
+- Estatísticas básicas de foco e ciclos.
+- Notas rápidas salvas automaticamente.
+- Som ambiente gerado no navegador, com controle de volume.
+- Preferências e tarefas guardadas no localStorage deste navegador.
+
+Observação: o painel não consulta clima real nem sincroniza dados entre dispositivos. A ilustração está em assets/forest-study.png.
